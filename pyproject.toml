@@ -1,0 +1,39 @@
+    
+    [build-system]
+    requires = ["setuptools>=68.2.2", "wheel"]
+    build-backend = "setuptools.build_meta"
+        
+    [project]
+    name = "snek_debug"
+    version = "0.4.0"
+    authors = [{name = "qodeninja"}]
+    description = "snek core shell package"
+    readme = "README.md"
+    classifiers = [
+        "Programming Language :: Python :: 3.11",
+        "Operating System :: OS Independent",
+    ]
+
+    dependencies = [ 
+      #"snek-utils>=0.0.0,<1.0.0" 
+    ]
+
+    #[project.scripts]
+    #keeji_world = "keeji.keeji_app.main:main"
+
+    # [tool.setuptools]
+    # where = ["src"]    
+    # include = ["culebra*"] 
+    # packages = ["culebra", "culebra.hello_world"]
+    # packages = find_namespace_packages(include=["culebra.*"])
+
+    [tool.setuptools.packages.find]
+    where = ["src"]  
+    include = ["snek*"] 
+
+
+    [project.urls]
+    Homepage = "https://example.com"
+    Documentation = "https://readthedocs.org/snekpak-debug"
+    Repository = "https://github.com/snekpak/debug.git"
+    Changelog = "https://github.com/snekpak/debug/blob/main/CHANGELOG.md"
